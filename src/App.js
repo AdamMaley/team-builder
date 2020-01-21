@@ -5,10 +5,10 @@ import './App.css';
 
 function App() {
 
-  const [teamMember, setTeamMember] = useState({ name: "", email: "", role: ""});
+  const [teamMember, setTeamMember] = useState({ name: "", email: "", role: "" });
 
   const handleChange = event => {
-    setTeamMember({...teamMember, [event.target.name]: event.target.value });
+    setTeamMember({ ...teamMember, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = event => {
@@ -29,7 +29,7 @@ function App() {
             name="name"
             value={teamMember.name}
             onChange={event => handleChange(event)}
-            />
+          />
         </label>
 
         <label>
@@ -39,18 +39,23 @@ function App() {
             name="email"
             value={teamMember.email}
             onChange={event => handleChange(event)}
-            />
+          />
         </label>
+        <br></br>
 
         <label>
           role:
-          <input 
+          <select>
             type="text"
             name="role"
             value={teamMember.role}
             onChange={event => handleChange(event)}
-            />
+            <option>UI DEV</option>
+            <option>FRONTEND DEV</option>
+            <option>BACKEND DEV</option>
+          </select>
         </label>
+        <br></br>
         <button>Submit</button>
       </form>
     </div>
