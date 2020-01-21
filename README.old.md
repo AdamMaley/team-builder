@@ -76,7 +76,7 @@ The flow for editing is hard to conceptualize. It should go something like this:
 
 ### STEP 4 - Form submit (STRETCH CONT.)
 
-2 readme files, initial commit
+
 This is an interesting bit of architecture we've done so far. We have built a reusable form that can be used to add a team member, or edit a team member. The last piece of the puzzle is this - when we submit the form, do we run an `addMember` function, or an `editMember` function? And how will the form know? Well, our form knows if we are editing a team member by whether or not there is the prop `memberToEdit`. (P.S. This can also be done with a boolean - something like `isEditing`...)
 
 Okay, now that we understand how `Form.js` knows if we are editing or creating members, we can finish this app!
